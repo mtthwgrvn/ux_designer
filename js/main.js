@@ -339,7 +339,7 @@ var SendMail = function () {
 
     if (isValidEmailAddress(emailVal)) {
         var params = {
-            'action': 'SendMessage',
+            'action': 'https://docs.google.com/forms/d/e/1FAIpQLScKgYtQzr7Ek8Dxxjy2ZdPA3DyTMw1f0V-mCRrD5rl75ecn_g/viewform?usp=pp_url&entry.2005620554=Matthew+Garvin&entry.1045781291=mtthwgrvn@gmail.com&entry.281065251=fake+subject&entry.839337160=fake+message',
             'name': jQuery('#name').val(),
             'email': jQuery('#contact-email').val(),
             'subject': jQuery('#subject').val(),
@@ -347,7 +347,7 @@ var SendMail = function () {
         };
         jQuery.ajax({
             type: "POST",
-            url: "https://docs.google.com/forms/d/e/1FAIpQLScKgYtQzr7Ek8Dxxjy2ZdPA3DyTMw1f0V-mCRrD5rl75ecn_g/viewform?usp=pp_url&entry.2005620554=Matthew+Garvin&entry.1045781291=mtthwgrvn@gmail.com&entry.281065251=fake+subject&entry.839337160=fake+message",
+            url: "php/sendMail.php",
             data: params,
             success: function (response) {
                 if (response) {
