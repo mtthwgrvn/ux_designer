@@ -663,11 +663,22 @@
                         </div>
                         <div class="one_half last">
                             <div class="contact-form">
-                                <p><input id="name" type="text" name="your-name" placeholder="Name"></p>
-                                <p><input id="contact-email" type="email" name="your-email" placeholder="Email"></p>
-                                <p><input id="subject" type="text" name="your-subject" placeholder="Subject"></p>
-                                <p><textarea id="message" name="your-message" placeholder="Message"></textarea></p>
-                                <p><input type="submit" onClick="SendMail()" value="SEND"></p>
+                                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScmkPepEa-73f7xQu9xgJGUqLQ2E5tuIvsWLyOh49XyimrPsQ/formResponse?usp=pp_url&entry.631809459=Matthew+Garvin&entry.1372484357=mgarvin@umich.edu&entry.1247154462=Testing&entry.2008674479=Testing" target="hidden_iframe" onsubmit="submitted=true;">
+								  Name:<input type="text" name="entry.631809459" id="entry.631809459"><br>
+								  Email:<input type="text" name="entry.1372484357" id="entry.1372484357"><br>
+								  Subject:<input type="text" name="entry.1247154462" id="entry.1247154462"><br>
+								  Message:<input type="text" name="entry.2008674479" id="entry.2008674479"><br>
+								  <input type="submit" value="Submit">
+								</form>
+								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+								<script src="assets/js/jquery.min.js"></script>
+								<script type="text/javascript">var submitted=false;</script>
+								<script type="text/javascript">
+								$('#gform').on('submit', function(e) {
+								  $('#gform *').fadeOut(2000);
+								  $('#gform').prepend('Your submission has been processed...');
+								  });
+								</script>
                             </div>
                         </div>
                         <div class="clear"></div>

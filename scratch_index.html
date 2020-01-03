@@ -714,18 +714,15 @@
                     </div>
                     <div class="one_half last">
                         <div class="contact-form">
-                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScmkPepEa-73f7xQu9xgJGUqLQ2E5tuIvsWLyOh49XyimrPsQ/viewform?usp=pp_url&entry.631809459=Matthew+Garvin&entry.1372484357=mgarvin@umich.edu&entry.1247154462=Testing&entry.2008674479=Testing" target="hidden_iframe" onsubmit="submitted=true;">
-							  Name:<br>
-							  <input type="text" name="entry.631809459" id="entry.631809459"><br>
-							  Email:<br>
-							  <input type="text" name="entry.1372484357" id="entry.1372484357"><br>
-							  Subject:<br>
-							  <input type="text" name="entry.1247154462" id="entry.1247154462"><br>
-							  Message:<br>
-							  <input type="text" name="entry.2008674479" id="entry.2008674479"><br>
+                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScmkPepEa-73f7xQu9xgJGUqLQ2E5tuIvsWLyOh49XyimrPsQ/formResponse?usp=pp_url&entry.631809459=Matthew+Garvin&entry.1372484357=mgarvin@umich.edu&entry.1247154462=Testing&entry.2008674479=Testing" target="hidden_iframe" onsubmit="submitted=true;">
+							  Name:<input type="text" name="entry.631809459" id="entry.631809459"><br>
+							  Email:<input type="text" name="entry.1372484357" id="entry.1372484357"><br>
+							  Subject:<input type="text" name="entry.1247154462" id="entry.1247154462"><br>
+							  Message:<input type="text" name="entry.2008674479" id="entry.2008674479"><br>
 							  <input type="submit" value="Submit">
 							</form>
-							<script src="assets/js/jquery.min.js"></script>
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        	<script src="assets/js/jquery.min.js"></script>
 							<script type="text/javascript">var submitted=false;</script>
 							<script type="text/javascript">
 							$('#gform').on('submit', function(e) {
@@ -733,9 +730,7 @@
 							  $('#gform').prepend('Your submission has been processed...');
 							  });
 							</script>
-
-							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                        </div>
+						</div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -795,24 +790,3 @@
 </body>
 
 </html>
-
-<form name="gform" id="gform" enctype="text/plain"
-    action="https://docs.google.com/forms/d/e/1FAIpQLScmkPepEa-73f7xQu9xgJGUqLQ2E5tuIvsWLyOh49XyimrPsQ/viewform?usp=pp_url&entry.631809459=fafa&entry.1372484357=fafaf"
-    target="hidden_iframe" onsubmit="submitted=true;">
-    First name:<br>
-    <input type="text" name="entry.810989529" id="entry.810989529"><br>
-    Last name:<br>
-    <input type="text" name="entry.463380756" id="entry.463380756"><br>
-    <input type="submit" value="Submit">
-</form>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted = false;</script>
-<script type="text/javascript">
-    $('#gform').on('submit', function (e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...');
-    });
-</script>
